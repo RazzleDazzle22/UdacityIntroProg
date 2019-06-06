@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.pink {
+    background-color: pink;
+}
+.purple {
+    background-color: purple;
+}
+.teal {
+    background-color: teal; 
+}

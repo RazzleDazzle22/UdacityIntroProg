@@ -1,0 +1,49 @@
+.card {
+    border: 5px solid black;
+    width: 400px;
+    margin-left: 40%; 
+    border-radius: 25px; 
+    box-shadow: 10px 10px 60px rgb(243, 31, 130);
+    background-image: url("bkg.jpg");
+}
+
+.top {
+    text-align: center; 
+}
+
+.content {
+    border: 2px solid white;
+    width: 310px;
+    margin-left: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px; 
+    padding-left: 5px;
+    padding-right: 5px; 
+    border-radius: 25px;
+    color: black; 
+}
+
+ul {
+    list-style-type: none; 
+}
+
+span {
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+}
+
+.italic {
+    font-style: italic; 
+}
+
+.image {
+    border: 5px solid white;
+    width: 300px;
+    height: 189px;
+    border-radius: 4px;
+    margin-left: 48px; 
+}
