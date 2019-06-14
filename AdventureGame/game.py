@@ -1,9 +1,12 @@
+##  Bryanna Armstrong
+##  June 2019
+##  bryanna.e.armstrong@gmail.com
+
 import os
 from random import choice 
 import platform 
 import time
 from PIL import Image
-
 
 def cls():
     var = platform.system() 
@@ -14,16 +17,13 @@ def cls():
     elif var == "Darwin":
         os.system("clear")
 
-
 def printP(txt, pause=1):
     print(txt)
     time.sleep(pause)
 
-
 def showImage(img):
     image = Image.open(img)
     image.show()
-
 
 def start(player):
     player["room"] = 1
@@ -49,7 +49,6 @@ def start(player):
         else:
             printP("Hmm...I did not understand that.") 
 
-
 def room2(player):
     printP("At the top of the stairs, there is a tiny box.")
     opened = ""
@@ -71,7 +70,6 @@ def room2(player):
         else:
             printP("Hmm...I did not understand that.") 
 
-
 def setup():
     player = {"room": 1, "win": False}
     cls()
@@ -79,7 +77,5 @@ def setup():
     printP("Accidentally, you stumble across a magical castle.")
     printP("Your curiosity entails you to go inside.")
     start(player)
-
-
 
 setup()
