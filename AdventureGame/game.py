@@ -72,6 +72,45 @@ def room2(player):
             printP("Hmm...I did not understand that.") 
 
 
+def room3(player): 
+    printP("Upon entry, the first thing you see is a Wizard.")
+    printP("The Wizard seems to be reading his spell book.")
+    printP("He is brewing some potions in his cauldron.")
+    printP("Finally, the Wizard offers you a potion.") 
+    while True:
+        printP("There are two potions to choose from.")
+        printP("The one on the right is pink and bubbly.")
+        printP("The one on the left is green and slimy.") 
+        print("Would you like to (1)drink the potion on the right, (2)the one on the left or (3)leave the Wizard's chamber.")
+        print("Enter 1, 2 or 3.")
+        x = input("")
+
+        if x == "1":
+            printP("You choose the potion on the right.")
+            printP("After drinking it, you realize you now have the power to fly!")
+            printP("This is so exciting! You fly out of the castle to show all your friends your new ability.")
+            player["win"] = True
+            break 
+
+        elif x == "2":
+            printP("You choke down the potion on the left.")
+            printP("Immediately, your body starts to tingle.")
+            animal = choice(["frog", "snail"])
+            printP("Before you know it, you have turned into a " + animal + ".")
+            printP("You start freaking out and run out of the castle to find a doctor.")
+            player["win"] = False
+            break 
+        
+        elif x == "3":
+            printP("Potions are scary!")
+            printP("You don't want to take any chances.")
+            printP("You run out of the Wizard's chamber as fast as you can.")
+            start(player)
+            break
+        else:
+            printP("Hmm...I did not understand that.")
+
+
 def setup():
     player = {"room": 1, "win": False}
     cls()
@@ -80,6 +119,22 @@ def setup():
     printP("Your curiosity entails you to go inside.")
     start(player)
 
-
-
+    if player["win"]:
+        printP("Congrats! You have won.")
+    else:
+        printP("Sorry! You have lost.")
+    
+    while True:
+        print("Would you like to play again?")
+        print("Enter Y or N.")
+        x = input("").lower()
+        if x == "y":
+            printP("Let's do this!")
+            setup()
+        elif x == "n":
+            printP("Goodbye. :(")
+            break 
+        else:
+            printP("Hmm...I did not understand that.")
+        
 setup()
