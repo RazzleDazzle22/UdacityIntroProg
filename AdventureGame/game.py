@@ -1,6 +1,5 @@
 ##  Bryanna Armstrong
 ##  June 2019
-##  bryanna.e.armstrong@gmail.com
 
 import os
 from random import choice 
